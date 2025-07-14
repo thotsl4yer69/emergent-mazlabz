@@ -7,14 +7,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 3000,
-    allowedHosts: [
-      'localhost',
-      '127.0.0.1',
-      '0.0.0.0',
-      '.emergentagent.com',
-      '.preview.emergentagent.com',
-      'f586b93a-828e-4be9-8a24-d19884788189.preview.emergentagent.com'
-    ]
+    allowedHosts: 'all'
   },
   build: {
     outDir: 'dist',
