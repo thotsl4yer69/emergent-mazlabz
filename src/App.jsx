@@ -584,6 +584,8 @@ const App = () => {
       { type: 'output', content: "Use 'files' command to view uploaded documents" }
     ])
   }
+
+  const handleLeadSubmit = (formData) => {
     setOutput(prev => [...prev, 
       { type: 'success', content: `Enterprise inquiry received from ${formData.company}` },
       { type: 'success', content: `Project: ${formData.projectType} | Budget: ${formData.budget}` },
