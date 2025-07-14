@@ -3,7 +3,7 @@ import './App.css'
 import LeadCapture from './components/LeadCapture'
 import ROICalculator from './components/ROICalculator'
 import PaymentProcessor from './components/PaymentProcessor'
-import DocumentUploader from './components/DocumentUploader'
+import AutomatedUploader from './components/AutomatedUploader'
 
 const App = () => {
   const [isBooted, setIsBooted] = useState(false)
