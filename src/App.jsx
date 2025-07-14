@@ -65,6 +65,8 @@ const App = () => {
       '  quote        - Request enterprise consultation',
       '  roi          - Calculate potential ROI',
       '  pay          - Secure project with downpayment',
+      '  upload       - Upload documents for AI analysis',
+      '  files        - View uploaded documents',
       '  schedule     - Book executive meeting',
       '  clear        - Clear terminal output',
       '  exit         - Terminate session',
