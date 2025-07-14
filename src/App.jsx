@@ -15,7 +15,9 @@ const App = () => {
   const [showLeadCapture, setShowLeadCapture] = useState(false)
   const [showROICalculator, setShowROICalculator] = useState(false)
   const [showPaymentProcessor, setShowPaymentProcessor] = useState(false)
+  const [showDocumentUploader, setShowDocumentUploader] = useState(false)
   const [projectData, setProjectData] = useState(null)
+  const [uploadedFiles, setUploadedFiles] = useState([])
   const inputRef = useRef(null)
   const terminalRef = useRef(null)
 
