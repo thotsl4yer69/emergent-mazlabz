@@ -424,6 +424,28 @@ const App = () => {
       
       return filesList
     },
+
+    schedule: () => [
+      'EXECUTIVE MEETING SCHEDULER',
+      '═══════════════════════════════════════',
+      '',
+      'AVAILABLE SLOTS:',
+      'Emergency Consultation: Available 24/7',
+      'Strategic Planning Session: Next available slot',
+      'Technology Assessment: 2-hour deep dive',
+      '',
+      'TO SCHEDULE:',
+      '1. Email: mazlabz.ai@gmail.com',
+      '2. Subject: "Executive Meeting Request"',
+      '3. Include: Company, urgency, preferred time',
+      '',
+      'Response Time: < 2 hours for Fortune 500',
+      'Meeting Format: In-person, Video, or Phone',
+      'Duration: 30 minutes to 2 hours based on scope',
+      '',
+      '[QUOTE] Request consultation',
+      ''
+    ],
       'EXECUTIVE MEETING SCHEDULER',
       '═══════════════════════════════════════',
       '',
