@@ -386,7 +386,44 @@ const App = () => {
       ]
     },
 
-    schedule: () => [
+    upload: () => {
+      setShowDocumentUploader(true)
+      return [
+        'INITIATING MOBILE DOCUMENT UPLOAD...',
+        'Requesting browser file access permissions...',
+        'Scanning for recent documents (PDF, DOC, DOCX, TXT)...',
+        'Enterprise-grade encryption enabled.',
+        ''
+      ]
+    },
+
+    files: () => {
+      if (uploadedFiles.length === 0) {
+        return [
+          'DOCUMENT STORAGE STATUS',
+          '═══════════════════════════════════════',
+          '',
+          'No documents currently uploaded.',
+          "Use 'upload' command to add documents for AI analysis.",
+          ''
+        ]
+      }
+      
+      const filesList = [
+        'UPLOADED DOCUMENTS',
+        '═══════════════════════════════════════',
+        '',
+        ...uploadedFiles.map((file, index) => 
+          `${index + 1}. ${file.name} (${(file.size / 1024).toFixed(1)}KB) - ${file.uploadTime}`
+        ),
+        '',
+        `Total: ${uploadedFiles.length} document(s)`,
+        'Status: Ready for AI analysis',
+        ''
+      ]
+      
+      return filesList
+    },
       'EXECUTIVE MEETING SCHEDULER',
       '═══════════════════════════════════════',
       '',
