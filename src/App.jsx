@@ -568,7 +568,20 @@ const App = () => {
     setOutput(prev => [...prev, { type: 'success', content: 'Opening enterprise consultation request...' }])
   }
 
-  const handleLeadSubmit = (formData) => {
+  const handleDocumentUpload = (files) => {
+    const newFiles = files.map(file => ({
+      ...file,
+      uploadTime: new Date().toLocaleString()
+    }))
+    
+    setUploadedFiles(prev => [...prev, ...newFiles])
+    
+    setOutput(prev => [...prev, 
+      { type: 'success', content: `✅ Successfully uploaded ${files.length} document(s)` },
+      { type: 'success', content: 'Files ready for AI analysis and processing' },
+      { type: 'output', content: "Use 'files' command to view uploaded documents" }
+    ])
+  }
     setOutput(prev => [...prev, 
       { type: 'success', content: `Enterprise inquiry received from ${formData.company}` },
       { type: 'success', content: `Project: ${formData.projectType} | Budget: ${formData.budget}` },
