@@ -650,6 +650,13 @@ const App = () => {
           projectData={projectData}
         />
       )}
+
+      {showDocumentUploader && (
+        <DocumentUploader 
+          onClose={() => setShowDocumentUploader(false)}
+          onUpload={handleDocumentUpload}
+        />
+      )}
     </div>
   )
 }
